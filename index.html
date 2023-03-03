@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme" content="#fff" />
+    <title>Tetris</title>
+    <meta name="description" content="Javascript Tetris game" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="rgb(224, 57, 57)" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css" />
+
+</head>
+
+<body>
+    <noscript>Please enable Javascript in order to play the game.</noscript>
+    <div class="page">
+        <center>
+            <h1><span id="tetris">TETRIS</span></h1>
+            <h3>Level : <span id="level">1</span></h3>
+            <h2>Score : <span id="score">0</span></h2>
+            <button id="start-btn">Start Game</button>
+            <button id="help-btn">Help</button>
+
+            <div id="help-overlay">
+                <h3>HELP</h3>
+                <p>1) Click ← to move left.</p>
+                <p>2) Click → to move right.</p>
+                <p>3) Click ↓ to move down.</p>
+                <p>4) Click ↑ to rotate the piece.</p>
+                <p>5) After you manage to fill an entire row, you get 10 points.</p>
+                <p>6) You level up after every 100 points.</p>
+                <p>7) The mini grid displays the next piece.</p>
+            </div>
+        </center>
+
+        <div class="container">
+            <div class="grid"></div>
+            <div class="mini-grid"></div>
+        </div>
+
+    </div>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker.register('./sw-cached-pages.js')
+                    .then(reg => console.log("Service worker registered"))
+                    .catch(err => console.error(`Service Worker Error: ${err}`));
+            });
+        } else {
+            console.log("Service Worker is not supported by browser.");
+        }
+    </script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

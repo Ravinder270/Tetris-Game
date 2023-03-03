@@ -1,0 +1,183 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    /* background-color: rgb(224, 57, 57); */
+    background: rgb(224, 57, 57);
+    font-family: "Rubik", sans-serif;
+}
+
+@media (min-width: 769px) {
+    body,
+    html {
+        overflow: hidden;
+        margin: 0 10%;
+    }
+}
+
+.page {
+    min-height: 100%;
+    background: rgb(250, 195, 173);
+    -webkit-box-shadow: inset 1px 1px 31px -7px rgba(148, 19, 19, 1);
+    -moz-box-shadow: inset 1px 1px 31px -7px rgba(148, 19, 19, 1);
+    box-shadow: inset 1px 1px 31px -7px rgba(148, 19, 19, 1);
+}
+
+h1 {
+    display: inline-flex;
+    margin: 10px 0 0 0;
+    padding: 10px 0 0 0;
+    border-bottom: 3px solid rgb(224, 57, 57);
+    border-radius: 10%;
+    text-shadow: -3px 0 rgb(224, 57, 57), 0 3px rgb(224, 57, 57),
+        3px 0 rgb(224, 57, 57), 0 -3px rgb(224, 57, 57);
+}
+
+#tetris span {
+    font-size: 55px;
+    font-weight: bold;
+    margin: 1px;
+}
+
+button {
+    background: rgb(224, 57, 57);
+    color: white;
+    border: none;
+    box-shadow: inset 0 0 5px 3px rgba(156, 38, 38, 0.9);
+    padding: 10px;
+    outline: none;
+    font-size: larger;
+    font-weight: bold;
+    border-radius: 2em;
+    cursor: pointer;
+    min-width: 160px;
+}
+
+h2 {
+    font-size: 30px;
+    color: white;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    font-weight: bolder;
+    text-shadow: -2px 0 rgb(224, 57, 57), 0 2px rgb(224, 57, 57),
+        2px 0 rgb(224, 57, 57), 0 -2px rgb(224, 57, 57);
+}
+
+h3 {
+    font-size: 20px;
+    color: white;
+    margin: 10px 0 0 0;
+    font-weight: bold;
+    text-shadow: -2px 0 rgb(224, 57, 57), 0 2px rgb(224, 57, 57),
+        2px 0 rgb(224, 57, 57), 0 -2px rgb(224, 57, 57);
+}
+
+.container {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
+    height: 400px;
+    background: #1b1b1b;
+    border: 2px solid black;
+    border-radius: 3px;
+}
+
+.grid div {
+    width: 18px;
+    height: 18px;
+    border: 1px solid rgb(250, 195, 173);
+    border-radius: 3px;
+}
+
+.nextTetrimino {
+    background-color: gold;
+}
+
+.jTetrimino {
+    background-color: #ff00cc;
+}
+
+.lTetrimino {
+    background-color: #00cccc;
+}
+
+.tTetrimino {
+    background-color: #7cfc00;
+}
+
+.sTetrimino {
+    background-color: #28cf75;
+}
+
+.zTetrimino {
+    background-color: #ff4500;
+}
+
+.iTetrimino {
+    background-color: crimson;
+}
+
+.oTetrimino {
+    background-color: #9400d3;
+}
+
+.mini-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 100px;
+    margin-bottom: 50px;
+    width: 100px;
+    height: 100px;
+    background: #1b1b1b;
+
+    border: 2px solid black;
+    border-radius: 3px;
+}
+
+.mini-grid div {
+    width: 18px;
+    height: 18px;
+    border: 1px solid rgb(250, 195, 173);
+    border-radius: 3px;
+}
+
+#help-overlay {
+    position: fixed;
+    display: none;
+    /* Hidden by default */
+    width: 50%;
+    height: 70%;
+    top: 15%;
+    left: 5%;
+    right: 5%;
+    bottom: 0;
+    margin: 0 auto;
+    background-color: rgb(224, 57, 57, 0.7);
+    box-shadow: inset 0 0 12px 4px rgba(156, 38, 38, 0.9);
+    z-index: 2;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    border: 2px solid white;
+    border-radius: 10%;
+}
+
+#help-overlay h3 {
+    font-size: 30px;
+    display: inline-flex;
+    margin-top: 5%;
+    /* padding: 0; */
+    border-bottom: 2px solid white;
+    border-radius: 10%;
+}
